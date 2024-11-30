@@ -28,9 +28,13 @@ const App = () => {
 
 	return (
 		<div className="min-h-screen bg-rose-100">
-			<div className="max-w-4xl mx-auto flex flex-col items-center justify-center p-6 gap-1">
-				<Quote quote={currentQuote} fetchNewQuote={fetchQuote} />
-				<QuoteHistory history={quoteHistory} />
+			<div className="max-w-4xl mx-auto flex flex-col sm:flex-row  justify-center">
+				<div className="flex-3 basis-3/5">
+					<Quote quote={currentQuote} fetchNewQuote={fetchQuote} />
+				</div>
+				<div className="flex-2 basis-2/5">
+					<QuoteHistory history={quoteHistory} />
+				</div>
 			</div>
 		</div>
 	);

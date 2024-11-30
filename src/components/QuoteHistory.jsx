@@ -2,12 +2,12 @@ import React from "react";
 
 const QuoteHistory = ({ history }) => {
 	return (
-		<div className="w-full mt-6 border-t pt-2 border-white/30">
+		<div className="flex flex-col max-h-screen w-full p-4 border-white/30">
 			<div className="flex items-center justify-between">
 				<h2 className="text-xl font-bold text-gray-700">Quote History</h2>
 				<span className="text-sm text-gray-600">{history.length} Quotes</span>
 			</div>
-			<ul className="mt-4 space-y-4">
+			<ul className="mt-4 space-y-4 flex-1 overflow-y-auto overflow-y-auto max-h-full">
 				{history.length > 0 && history.map((quote, index) => (
 					<li
 						key={index}

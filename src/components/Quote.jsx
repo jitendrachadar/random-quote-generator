@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import logo from "../assets/rqg-icon.png";
 
 const Quote = ({ quote, fetchNewQuote }) => {
-
 	return (
-		<div
-			className="flex flex-col justify-between p-6  min-h-56 w-full
-            bg-white/30 backdrop-blur-md border rounded-md border-white/20 shadow-lg"
-		>
-			<p className="text-xs text-gray-400 mt-2">Quote</p>
-			<p className="text-3xl sm:text-5xl font-semibold text-black mb-10">
-				"{quote.quote}"
-			</p>
-			<div className="flex justify-between items-center">
+		<div className="p-4 sm:h-screen">
+			<div
+				className="flex flex-col flex-1  p-6 sm:min-h-full justify-between
+            bg-white/50 backdrop-blur-md border rounded-md border-white/20 shadow-lg"
+			>
+				<img className="max-w-xs self-center" src={logo} alt="random quote generator logo" />
+				<div className="">
+					<p className="text-xs text-gray-400 mt-2">Quote</p>
+					<p className="text-3xl sm:text-5xl font-semibold text-black mb-10">
+						"{quote.quote}"
+					</p>
+				</div>
+				<div className="flex justify-between items-center">
 					<button
 						onClick={fetchNewQuote}
-						className="relative flex items-center justify-center rounded-full border 
-                    hover:bg-rose-100 border-white p-2 hover:scale-125 transition-scale duration-300"
+						className="relative flex justify-center gap-1 bg-rose-100 rounded-full border 
+                    border-white p-2 hover:scale-105 transition-scale duration-300"
 					>
 						<FontAwesomeIcon icon={faQuoteLeft} />
+						<span className="text-gray-700 font-medium">New Quote</span>
 						<FontAwesomeIcon icon={faQuoteRight} />
 					</button>
 
-				<p className="text-lg text-gray-600">{quote.author || "Unknown"}</p>
+					<p className="text-lg text-gray-600">{quote.author || "Unknown"}</p>
+				</div>
 			</div>
 		</div>
 	);
