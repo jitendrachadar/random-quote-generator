@@ -10,7 +10,7 @@ const Quote = ({ quote, fetchNewQuote }) => {
 				className="flex flex-col flex-1  p-6 sm:min-h-full justify-between
             bg-white/50 backdrop-blur-md border rounded-md border-white/20 shadow-lg"
 			>
-				<img className="max-w-xs self-center" src={logo} alt="random quote generator logo" />
+				<img className="w-3/5 self-center" src={logo} alt="random quote generator logo" />
 				<div className="">
 					<p className="text-xs text-gray-400 mt-2">Quote</p>
 					<p className="text-3xl sm:text-5xl font-semibold text-black mb-10">
