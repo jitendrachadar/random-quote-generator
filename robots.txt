@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://jitendrachadar.github.io/random-quote-generator/sitemap.xml
